@@ -25,7 +25,9 @@ class AuthController(
         if (userRepository.existsByUsername(req.username)) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(mapOf("error" to "Username already taken"))
         }
-        userRepository.save(User(username = req.username, password = passwordEncoder.encode(req.password)))
+        val password = passwordEncoder.encode(req.password)
+        requireNotNull(password)
+        userRepository.save(User(username = req.username, password = password))
         return ResponseEntity.status(HttpStatus.CREATED).body(mapOf("message" to "User registered"))
     }
 

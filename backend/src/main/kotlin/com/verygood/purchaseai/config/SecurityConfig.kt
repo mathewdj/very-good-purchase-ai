@@ -28,8 +28,7 @@ class SecurityConfig(
 
     @Bean
     fun authenticationProvider(): DaoAuthenticationProvider =
-        DaoAuthenticationProvider().also {
-            it.setUserDetailsService(userDetailsService)
+        DaoAuthenticationProvider(userDetailsService).also {
             it.setPasswordEncoder(passwordEncoder())
         }
 
