@@ -1,3 +1,10 @@
+# Project High Level Requirements
+
+# Docker compose test stack
+```
+pgcli postgres://purchaseai:purchaseai@localhost:5432/purchaseai
+```
+
   Backend (backend/)
   - Spring Boot 3.2 + Kotlin + Hibernate + Spring Security + JWT (jjwt 0.12)
   - Flyway migrations: users, purchase_types, purchases tables
