@@ -5,5 +5,11 @@ Source: https://www.aihero.dev/my-agents-md-file-for-building-plans-you-actually
 
 # Code Style
 - Prefer self documenting code over adding comments to code
-- Regarding kotlin:
-  - Use assertj for assertions
+
+## kotlin code style:
+- Use assertj for assertions
+- Use mockk for mocking
+- When writing test name use a BDD style eg `given setup, when method name called, then summary of assertions (or assertion if concise)`
+- The project uses jenv to manage JDK versions. Therefore use .java-version to determine version of JDK to run tests
+- Domain objects should be reused across tests. Please use a TestFixtures.kt file with a default params for domain objects
+- Companion objects should be at the end of the class file

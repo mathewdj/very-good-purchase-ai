@@ -18,6 +18,7 @@
 
 # Agent tasks
 1. ✅Kotlin project creation agent - that has the latest versions of kotlin artefacts - copy versions from project
+2. Kotlin latest library versions research agent might be better than above 
 
 # Front end tasks
 1. Unit tests
