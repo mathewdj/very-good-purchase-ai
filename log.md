@@ -1,4 +1,15 @@
-# Setup linting
+# 2026-04-12 - Setup justfile
+Plan mode:
+```
+in tasks.md implement justfile. The justfile should have commands to:
+  -  lint for backend and frontend.
+  - commands to run tests on backend and frontend
+  - commands to start docker compose stack for manual testing
+```
+
+Outcome: really clean justfile than can chain both FE and BE for lint and build commands.
+
+# 2026-04-12 - Setup linting
 ```
 open tasks.md and implement ktlint
 ```

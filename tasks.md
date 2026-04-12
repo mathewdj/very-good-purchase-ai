@@ -10,7 +10,7 @@
 
 # Backend tasks
 1. ✅Setup ktlint
-2. Create justfile
+2. ✅Create justfile
 3. Unit tests
 4. Integration tests
 5. Microservice isolation test - Idea is to move fast with AI but not require an end to end test, to test the backend. As end to end tests take a long time to run.
