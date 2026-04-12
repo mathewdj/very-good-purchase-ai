@@ -4,6 +4,16 @@ See [Log](log.md) for the planning mode prompt and subsequent prompts.
 # Planned work
 See [Tasks](tasks.md) for a series of stories and tasks for the project.
 
+# Coding Practices
+## Testing
+- All production code should have a unit test
+- For backend, use assertj library for assertions over hamcrest or built in junit.
+
+## Linting
+- When writing new code please run linting tasks and ensure new code is compatible with linting standard.
+- For backend use `./gradlew ktlintCheck` and `./gradlew ktlintFormat` for fixing some style problems.
+- For Frontend please use `npm run lint`
+
 # Docker compose test stack
 ```
 pgcli postgres://purchaseai:purchaseai@localhost:5432/purchaseai
