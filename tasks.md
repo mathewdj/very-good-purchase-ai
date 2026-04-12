@@ -22,3 +22,4 @@
 # Front end tasks
 1. Unit tests
 2. End to end tests
+3. ✅Setup eslint
