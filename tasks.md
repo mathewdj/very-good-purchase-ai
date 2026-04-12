@@ -1,3 +1,6 @@
+# Guidelines
+- When a task or story is completed, then mark with a tick (✅)
+
 # Stories
 1. Story: As a Purchaser, when I open VGP analytics tab, then I can see some trends and graphs
    1. Graph of spend per month by purchase type
