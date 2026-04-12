@@ -2,6 +2,7 @@
 backend/.gradle/
 backend/build/
 backend/out/
+.idea/
 
 # Frontend
 frontend/node_modules/
