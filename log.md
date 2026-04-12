@@ -1,3 +1,10 @@
+# 2026-04-12 - Start adding integration tests while improving CLAUDE.md
+- `create a postgres docker integration test for PurchaseRepository`
+- Reviewed code and noticed some shortcomings regarding test fixtures 
+- Updated [CLAUDE.md](CLAUDE.md) to describe test fixtures and putting companion objects at bottom of class file (thinking: companion objects are boring often containing static constants and prefer to see test file).
+- `rework PurchaseRepositoryIntegrationTest to use conventions from CLAUDE.md`
+- `create an integration test for PurchaseTypeRepository.kt`
+
 # 2026-04-12 - Setup justfile
 Plan mode:
 ```
