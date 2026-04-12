@@ -1,5 +1,5 @@
 lint-backend:
-    cd backend && ./gradlew ktlintCheck
+    cd backend && jenv exec ./gradlew ktlintCheck
 
 lint-frontend:
     cd frontend && npm run lint
@@ -7,7 +7,7 @@ lint-frontend:
 lint: lint-backend lint-frontend
 
 test-backend:
-    cd backend && ./gradlew test
+    cd backend && jenv exec ./gradlew test
 
 test-frontend:
     echo "No frontend tests configured yet"
