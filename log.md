@@ -1,3 +1,12 @@
+# Setup linting
+```
+open tasks.md and implement ktlint
+```
+Some rules were violating ktlint, so I decided to get Claude to run a ktlint baseline and fix in another commit.
+```
+Create a ktlint baseline so that we can fix in another commit
+```
+
 # 2026-04-12 - Create Spring Creation project agent
 Created a claude agent that can setup a kotlin project, hopefully avoiding the dependency hell of getting kotlin, gradle, spring and docker versions working correctly.
 

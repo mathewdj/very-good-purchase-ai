@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<baseline version="1.0">
+    <file name="src/main/kotlin/com/verygood/purchaseai/auth/AuthController.kt">
+        <error line="10" column="1" source="standard:no-wildcard-imports" />
+    </file>
+    <file name="src/main/kotlin/com/verygood/purchaseai/auth/User.kt">
+        <error line="3" column="1" source="standard:no-wildcard-imports" />
+    </file>
+    <file name="src/main/kotlin/com/verygood/purchaseai/purchase/Purchase.kt">
+        <error line="4" column="1" source="standard:no-wildcard-imports" />
+    </file>
+    <file name="src/main/kotlin/com/verygood/purchaseai/purchase/PurchaseController.kt">
+        <error line="15" column="1" source="standard:no-wildcard-imports" />
+    </file>
+    <file name="src/main/kotlin/com/verygood/purchaseai/purchasetype/PurchaseType.kt">
+        <error line="3" column="1" source="standard:no-wildcard-imports" />
+    </file>
+    <file name="src/main/kotlin/com/verygood/purchaseai/purchasetype/PurchaseTypeController.kt">
+        <error line="8" column="1" source="standard:no-wildcard-imports" />
+    </file>
+</baseline>

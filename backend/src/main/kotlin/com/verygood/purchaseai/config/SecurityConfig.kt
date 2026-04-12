@@ -21,7 +21,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 @Configuration
 class SecurityConfig(
     private val jwtAuthFilter: JwtAuthFilter,
-    private val userDetailsService: AppUserDetailsService
+    private val userDetailsService: AppUserDetailsService,
 ) {
     @Bean
     fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
@@ -33,8 +33,7 @@ class SecurityConfig(
         }
 
     @Bean
-    fun authenticationManager(config: AuthenticationConfiguration): AuthenticationManager =
-        config.authenticationManager
+    fun authenticationManager(config: AuthenticationConfiguration): AuthenticationManager = config.authenticationManager
 
     @Bean
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
@@ -45,20 +44,20 @@ class SecurityConfig(
             .authorizeHttpRequests {
                 it.requestMatchers(HttpMethod.POST, "/auth/register", "/auth/login").permitAll()
                 it.anyRequest().authenticated()
-            }
-            .authenticationProvider(authenticationProvider())
+            }.authenticationProvider(authenticationProvider())
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter::class.java)
         return http.build()
     }
 
     @Bean
     fun corsConfigurationSource(): CorsConfigurationSource {
-        val config = CorsConfiguration().apply {
-            allowedOriginPatterns = listOf("*")
-            allowedMethods = listOf("GET", "POST", "PUT", "DELETE", "OPTIONS")
-            allowedHeaders = listOf("*")
-            allowCredentials = true
-        }
+        val config =
+            CorsConfiguration().apply {
+                allowedOriginPatterns = listOf("*")
+                allowedMethods = listOf("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                allowedHeaders = listOf("*")
+                allowCredentials = true
+            }
         return UrlBasedCorsConfigurationSource().also { it.registerCorsConfiguration("/**", config) }
     }
 }

@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     id("org.springframework.boot") version "4.0.5"
     id("io.spring.dependency-management") version "1.1.7"
+    id("org.jlleitschuh.gradle.ktlint") version "12.1.2"
     kotlin("jvm") version "2.2.21"
     kotlin("plugin.spring") version "2.2.21"
     kotlin("plugin.jpa") version "2.2.21"
@@ -17,6 +18,10 @@ kotlin {
 tasks.withType<JavaCompile> {
     sourceCompatibility = "24"
     targetCompatibility = "24"
+}
+
+ktlint {
+    version.set("1.5.0")
 }
 
 group = "com.verygood"

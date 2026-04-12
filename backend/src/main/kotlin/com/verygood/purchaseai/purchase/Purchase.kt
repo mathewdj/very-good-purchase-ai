@@ -18,5 +18,5 @@ data class Purchase(
     val amount: BigDecimal,
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "purchase_type_id", nullable = false)
-    val purchaseType: PurchaseType
+    val purchaseType: PurchaseType,
 )

@@ -9,7 +9,7 @@
 3. Story: As a Purchaser, when I make a purchase and receive an email receipt, then VGP can load a purchase via an email receipt
 
 # Backend tasks
-1. Setup ktlint
+1. ✅Setup ktlint
 2. Create justfile
 3. Unit tests
 4. Integration tests
