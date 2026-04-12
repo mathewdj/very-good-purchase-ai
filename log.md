@@ -1,4 +1,9 @@
-# 2026-04-12 - Initial collaboration to create project
+# 2026-04-12 - Create Spring Creation project agent
+Created a claude agent that can setup a kotlin project, hopefully avoiding the dependency hell of getting kotlin, gradle, spring and docker versions working correctly.
+
+`cp agents/kotlin-spring-boot.md ~/.claude/agents/`
+
+# 2026-04-07 - Initial collaboration to create project
 Created a simple portfolio project to demonstrate claude code skills. 
 
 Ran the following in plan mode
