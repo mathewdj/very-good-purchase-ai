@@ -17,7 +17,6 @@ import org.testcontainers.junit.jupiter.Testcontainers
 @SpringBootTest
 @Testcontainers
 class PurchaseTypeRepositoryIntegrationTest {
-
     @Autowired
     lateinit var purchaseTypeRepository: PurchaseTypeRepository
 
@@ -26,8 +25,7 @@ class PurchaseTypeRepositoryIntegrationTest {
         purchaseTypeRepository.deleteAll()
     }
 
-    private fun savedPurchaseType(name: String = "Food") =
-        purchaseTypeRepository.save(TestFixtures.purchaseType(name))
+    private fun savedPurchaseType(name: String = "Food") = purchaseTypeRepository.save(TestFixtures.purchaseType(name))
 
     @Test
     fun `given no types exist, when save called, then type is persisted with generated id`() {
@@ -85,10 +83,11 @@ class PurchaseTypeRepositoryIntegrationTest {
 
     companion object {
         @Container
-        val postgres: PostgreSQLContainer<*> = PostgreSQLContainer("postgres:15-alpine")
-            .withDatabaseName("purchaseai")
-            .withUsername("purchaseai")
-            .withPassword("purchaseai")
+        val postgres: PostgreSQLContainer<*> =
+            PostgreSQLContainer("postgres:15-alpine")
+                .withDatabaseName("purchaseai")
+                .withUsername("purchaseai")
+                .withPassword("purchaseai")
 
         @JvmStatic
         @DynamicPropertySource

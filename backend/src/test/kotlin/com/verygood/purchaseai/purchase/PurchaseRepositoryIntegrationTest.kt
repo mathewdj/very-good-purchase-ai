@@ -18,7 +18,6 @@ import org.testcontainers.junit.jupiter.Testcontainers
 @SpringBootTest
 @Testcontainers
 class PurchaseRepositoryIntegrationTest {
-
     @Autowired
     lateinit var purchaseRepository: PurchaseRepository
 
@@ -31,11 +30,12 @@ class PurchaseRepositoryIntegrationTest {
         purchaseTypeRepository.deleteAll()
     }
 
-    private fun savedPurchaseType(name: String = "Food") =
-        purchaseTypeRepository.save(TestFixtures.purchaseType(name))
+    private fun savedPurchaseType(name: String = "Food") = purchaseTypeRepository.save(TestFixtures.purchaseType(name))
 
-    private fun savedPurchase(name: String = "Groceries", purchaseType: PurchaseType = savedPurchaseType()) =
-        purchaseRepository.save(TestFixtures.purchase(purchaseType = purchaseType, description = name))
+    private fun savedPurchase(
+        name: String = "Groceries",
+        purchaseType: PurchaseType = savedPurchaseType(),
+    ) = purchaseRepository.save(TestFixtures.purchase(purchaseType = purchaseType, description = name))
 
     @Test
     fun `given purchase exists, when findAllByPurchaseTypeId called, then returns matching purchases`() {
@@ -91,10 +91,11 @@ class PurchaseRepositoryIntegrationTest {
 
     companion object {
         @Container
-        val postgres: PostgreSQLContainer<*> = PostgreSQLContainer("postgres:15-alpine")
-            .withDatabaseName("purchaseai")
-            .withUsername("purchaseai")
-            .withPassword("purchaseai")
+        val postgres: PostgreSQLContainer<*> =
+            PostgreSQLContainer("postgres:15-alpine")
+                .withDatabaseName("purchaseai")
+                .withUsername("purchaseai")
+                .withPassword("purchaseai")
 
         @JvmStatic
         @DynamicPropertySource

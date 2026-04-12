@@ -1,6 +1,9 @@
 lint-backend:
     cd backend && jenv exec ./gradlew ktlintCheck
 
+lint-backend-format:
+    cd backend && jenv exec ./gradlew ktlintFormat
+
 lint-frontend:
     cd frontend && npm run lint
 
